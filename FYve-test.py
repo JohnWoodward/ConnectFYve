@@ -1,8 +1,4 @@
-import os
-import sys
-import spotipy.util as util
-import webbrowser
-util.prompt_for_user_token(username,scope,client_id='97ef4ffd06bd471897a4e35d9bf7f48f',client_secret='11832f659f1f4389af7722394c041527',redirect_uri='https://www.google.com/')
+import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
 client_credentials_manager = SpotifyClientCredentials()
@@ -16,8 +12,3 @@ while playlists:
         playlists = sp.next(playlists)
     else:
         playlists = None
-
-
-
-
-##############
